@@ -1,14 +1,14 @@
-# Infinity Bot
+# Discore
 
 A large-scale, modular Discord community platform built with **Python** and **discord.py**, comprising approximately **300 modules** and **72 plugin extensions**.
 
-Infinity Bot powers community operations, engagement systems, progression, virtual economy mechanics, social games, voice utilities, AI-powered features, and administrative tooling within an extensible architecture designed for a large Discord community.
+Discore powers community operations, engagement systems, progression, virtual economy mechanics, social games, voice utilities, AI-powered features, and administrative tooling within an extensible architecture designed for a large Discord community.
 
 The platform is primarily designed for a configured Discord guild, with fast guild-scoped application-command synchronization during development.
 
 ## Overview
 
-Infinity Bot serves as the central automation and application layer for a large Discord community.
+Discore serves as the central automation and application layer for a large Discord community.
 
 At its current scale, the codebase consists of approximately:
 
@@ -32,10 +32,10 @@ The modular extension architecture allows individual systems to be developed, lo
 
 ## Platform Scale
 
-Infinity Bot is designed as a **large Discord community platform**, rather than a small collection of commands.
+Discore is designed as a **large Discord community platform**, rather than a small collection of commands.
 
 ```text
-Infinity Bot
+Discore
 ├── ~300 Python/application modules
 ├── 72 plugin extensions
 ├── Prefix command system
@@ -66,7 +66,7 @@ This structure allows features to evolve independently while sharing a common Di
 
 ### Community and Server Utilities
 
-Infinity Bot includes utilities intended to make server information and navigation easier for members, including:
+Discore includes utilities intended to make server information and navigation easier for members, including:
 
 - Custom `!help` command
 - FAQ interfaces and panels
@@ -96,7 +96,7 @@ The streak system can integrate with other progression and reward mechanics.
 
 #### XP and progression
 
-Infinity Bot includes XP-based progression features such as:
+Discore includes XP-based progression features such as:
 
 - XP accumulation
 - Role progression ladders
@@ -108,7 +108,7 @@ Role rewards can be tied to Discord roles where the bot has sufficient permissio
 
 ### AI Personas
 
-Infinity Bot can expose AI-backed Discord personas that respond to members when mentioned directly or replied to through an associated message.
+Discore can expose AI-backed Discord personas that respond to members when mentioned directly or replied to through an associated message.
 
 Responses can be sent through Discord webhooks, allowing personas to appear with distinct names, avatars, character identities, and response behavior. Persona generation uses the OpenAI API and requires a valid `OPENAI_API_KEY` plus appropriate Discord webhook permissions.
 
@@ -125,7 +125,7 @@ The asynchronous OpenAI client is used for quiz-generation workflows. Document-p
 
 ## Economy
 
-Infinity Bot implements a multi-layer virtual economy:
+Discore implements a multi-layer virtual economy:
 
 ```text
 Coins → Orbs → Stars → Diamonds
@@ -170,7 +170,7 @@ The shop works alongside the XP and currency systems as part of the broader prog
 
 ## Games and Social Systems
 
-Infinity Bot contains a variety of lightweight social and game-oriented modules, including:
+Discore contains a variety of lightweight social and game-oriented modules, including:
 
 - Clans
 - Spin wheel
@@ -189,7 +189,7 @@ Individual features are separated into their relevant extensions and modules to 
 
 ### Voice-State Tracking
 
-Infinity Bot listens to Discord voice-state changes and can use them for:
+Discore listens to Discord voice-state changes and can use them for:
 
 - Activity tracking
 - Streak progression
@@ -212,7 +212,7 @@ without redesigning the surrounding Discord integration.
 
 ## Administrative Tooling
 
-Infinity Bot includes server administration and maintenance utilities intended for authorized staff, including:
+Discore includes server administration and maintenance utilities intended for authorized staff, including:
 
 - Category and channel backups
 - Channel restoration workflows
@@ -235,7 +235,7 @@ The economy and networking functionality includes a BTC price announcement utili
 
 ## Architecture
 
-Infinity Bot follows a modular `discord.py` architecture centered around extensions, Cogs, and reusable modules. With roughly **300 modules and 72 plugin extensions**, architectural separation prevents the runtime from becoming a monolithic application.
+Discore follows a modular `discord.py` architecture centered around extensions, Cogs, and reusable modules. With roughly **300 modules and 72 plugin extensions**, architectural separation prevents the runtime from becoming a monolithic application.
 
 ```text
 Discord Gateway / REST API
@@ -379,7 +379,7 @@ The exact configuration-loading implementation can be adapted to the deployment 
 
 ## Command Model
 
-Infinity Bot uses both traditional prefix commands and Discord application commands.
+Discore uses both traditional prefix commands and Discord application commands.
 
 ### Prefix Commands
 
@@ -463,7 +463,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-Infinity Bot reads its core Discord configuration through `configs.config_general`.
+Discore reads its core Discord configuration through `configs.config_general`.
 
 At minimum, configure:
 
@@ -498,7 +498,7 @@ The repository also contains `pycord/.env`. Use the environment-loading strategy
 
 Do **not** commit production credentials to source control.
 
-## Running Infinity Bot
+## Running Discore
 
 Start the application with:
 
@@ -521,7 +521,7 @@ A successful startup should result in the bot connecting to Discord and exposing
 
 Features that rely on Discord gateway events require the corresponding intents to be enabled both in the Discord Developer Portal and in the application's `discord.py` configuration.
 
-Depending on the enabled extensions, Infinity Bot may require access to:
+Depending on the enabled extensions, Discore may require access to:
 
 - Guilds
 - Guild members
@@ -559,7 +559,7 @@ This is useful for a private or community-specific deployment because it prevent
 
 ## Multi-Guild Deployment
 
-To convert Infinity Bot into a general multi-server application, review at least the following areas:
+To convert Discore into a general multi-server application, review at least the following areas:
 
 - Remove or redesign `restrict_to_english_cafe`
 - Replace assumptions around a single `BOT_GUILD_ID`
@@ -769,7 +769,7 @@ Grant the bot only the Discord permissions required by enabled modules. For exam
 
 ## Deployment
 
-Infinity Bot can run anywhere capable of maintaining a persistent Python process and outbound connectivity to Discord and configured external APIs.
+Discore can run anywhere capable of maintaining a persistent Python process and outbound connectivity to Discord and configured external APIs.
 
 Common deployment targets include:
 
